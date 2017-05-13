@@ -28,7 +28,8 @@ agent = Mechanize.new
 page = agent.get(url)
 
 if page.search("tr.pagerRow").empty?
-  abort('Nothing to scape')
+  puts 'Nothing to scape'
+  exit 0
 end
 
 while page.search("tr.pagerRow").search("td")[-1].inner_text == '...' do
