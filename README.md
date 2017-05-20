@@ -2,7 +2,7 @@
 
 This council involves the followings
 * Server - Microsoft
-* System - ePathway
+* System - eProperty
 * Cookie tracking - Yes
 * Pagination - Yes
 * Javascript - Yes __doPostBack
