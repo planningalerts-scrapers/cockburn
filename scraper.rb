@@ -59,12 +59,8 @@ totalPages = page.search("tr.pagerRow").search("td")[-1].inner_text.to_i
       'date_received'     => Date.parse(result.search("td")[1]).to_s
     }
 
-    if (ScraperWiki.select("* from data where `council_reference`='#{record['council_reference']}'").empty? rescue true)
-      puts "Saving record " + record['council_reference'] + ", " + record['address']
-      # puts record
-      ScraperWiki.save_sqlite(['council_reference'], record)
-    else
-      puts 'Skipping already saved record ' + record['council_reference']
-    end
+    puts "Saving record " + record['council_reference'] + ", " + record['address']
+    # puts record
+    ScraperWiki.save_sqlite(['council_reference'], record)
   end
 end
