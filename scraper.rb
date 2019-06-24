@@ -14,9 +14,11 @@ case ENV['MORPH_PERIOD']
   	period = "LM"
   when 'thismonth'
   	period = "TM"
-  else
+  when 'thisweek'
     period = "TW"
-  	ENV['MORPH_PERIOD'] = 'thisweek'
+  else
+    period = "TM"
+  	ENV['MORPH_PERIOD'] = 'thismonth'
 end
 puts "Getting data in `" + ENV['MORPH_PERIOD'] + "`, changable via MORPH_PERIOD environment"
 
